@@ -5,3 +5,4 @@ const app = express()
 
 // Middleware
 app.use(morgan('dev'))
+app.use(express.urlencoded({ extended: false }))
