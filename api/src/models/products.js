@@ -9,6 +9,7 @@ const products = Sequelize.define('products', {
         type: DataTypes.NUMBER,
         allowNull: false,
     },
+    image: {},
     description: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -16,6 +17,9 @@ const products = Sequelize.define('products', {
     category: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    stok: {
+        type: DataTypes.INTEGER,
     },
 })
 
