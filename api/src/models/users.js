@@ -6,4 +6,10 @@ const users = Sequelize.define('users', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
 })
+
+export default users
