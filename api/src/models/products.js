@@ -20,8 +20,15 @@ const products = Sequelize.define('products', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    stok: {
+    brand: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    stock: {
         type: DataTypes.INTEGER,
+    },
+    availability: {
+        type: DataTypes.BOOLEAN,
     },
 })
 
