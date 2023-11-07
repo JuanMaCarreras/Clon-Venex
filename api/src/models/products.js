@@ -9,7 +9,7 @@ const products = Sequelize.define('products', {
         type: DataTypes.NUMBER,
         allowNull: false,
     },
-    image: {
+    img: {
         type: DataTypes.STRING,
     },
     description: {
