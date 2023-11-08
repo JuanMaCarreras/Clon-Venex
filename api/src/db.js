@@ -12,10 +12,6 @@ const sequelize = new Sequelize(
     },
 )
 
-// Aca vendrian las relaciones
-// Product.hasMany(Reviews);
-//__________________________________tabla intermedia
-Country.belongsToMany(Activity, { through: 'country_activity' })
-Activity.belongsToMany(Country, { through: 'country_activity' })
+//Tabla de relacion dependecia // Tabla intermedia
 
 export default sequelize
