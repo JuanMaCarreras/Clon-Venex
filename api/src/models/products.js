@@ -1,7 +1,7 @@
-import { Sequelize, DataTypes } from 'sequelize'
+import { DataTypes } from 'sequelize'
 import sequelize from '../db'
 
-const products = Sequelize.define('products', {
+export const Products = sequelize.define('products', {
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -32,5 +32,3 @@ const products = Sequelize.define('products', {
         type: DataTypes.BOOLEAN,
     },
 })
-
-export default products
