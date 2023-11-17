@@ -1,7 +1,7 @@
-import { Sequelize, DataTypes } from 'sequelize'
+import { DataTypes } from 'sequelize'
 import sequelize from '../db'
 
-const users = Sequelize.define('users', {
+export const Users = sequelize.define('users', {
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -11,5 +11,3 @@ const users = Sequelize.define('users', {
         allowNull: false,
     },
 })
-
-export default users
