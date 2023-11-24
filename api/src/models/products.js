@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize'
 import sequelize from '../db'
+import Users from './users'
 
 export const Products = sequelize.define('products', {
     name: {
@@ -32,3 +33,6 @@ export const Products = sequelize.define('products', {
         type: DataTypes.BOOLEAN,
     },
 })
+
+Products.belongsToMany(Users, { through: 'Users_products' })
+Users.belongsToMany(Products, { through: 'Users_products' })
