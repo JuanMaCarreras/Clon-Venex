@@ -1,30 +1,30 @@
 import { DataTypes } from 'sequelize'
-import sequelize from '../db'
-import Users from './users'
+import sequelize from '../db.js'
+import Users from './users.js'
 
-export const Products = sequelize.define('products', {
+const Products = sequelize.define('products', {
     name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        // allowNull: false,
     },
     price: {
-        type: DataTypes.NUMBER,
-        allowNull: false,
+        type: DataTypes.INTEGER,
+        // allowNull: false,
     },
     img: {
         type: DataTypes.STRING,
     },
     description: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        // allowNull: false,
     },
     category: {
         type: DataTypes.STRING,
-        allowNull: false,
+        // allowNull: false,
     },
     brand: {
         type: DataTypes.STRING,
-        allowNull: false,
+        // allowNull: false,
     },
     stock: {
         type: DataTypes.INTEGER,
@@ -36,3 +36,5 @@ export const Products = sequelize.define('products', {
 
 Products.belongsToMany(Users, { through: 'Users_products' })
 Users.belongsToMany(Products, { through: 'Users_products' })
+
+export default Products

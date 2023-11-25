@@ -1,5 +1,6 @@
 import app from './src/app.js'
 import sequelize from './src/db.js'
+import './src/models/products.js'
 
 sequelize.sync({ force: true }).then(() => {
     console.log('Data base connected')

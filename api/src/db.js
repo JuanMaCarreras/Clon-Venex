@@ -13,6 +13,4 @@ const sequelize = new Sequelize(
     },
 )
 
-//Tabla de relacion dependecia // Tabla intermedia
-
 export default sequelize
