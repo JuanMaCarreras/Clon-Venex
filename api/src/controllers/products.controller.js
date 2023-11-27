@@ -6,7 +6,8 @@ export const getProducts = async (req, res) => {
 
         res.status(200).json(allProducts)
     } catch (error) {
-        res.status(404).send('Products not found', error)
+        console.log('Error al obtener productos:', error)
+        res.status(500).json({ error: 'Products not found' })
     }
 }
 
