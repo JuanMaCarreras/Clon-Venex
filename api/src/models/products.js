@@ -3,6 +3,9 @@ import sequelize from '../db.js'
 import Users from './users.js'
 
 const Products = sequelize.define('products', {
+    id: {
+        type: DataTypes.UUID,
+    },
     name: {
         type: DataTypes.STRING,
         // allowNull: false,
