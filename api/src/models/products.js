@@ -1,6 +1,6 @@
 import { DataTypes } from 'sequelize'
 import sequelize from '../db.js'
-import Users from './users.js'
+import Users from './Users.js'
 
 const Products = sequelize.define('products', {
     id: {
@@ -11,26 +11,26 @@ const Products = sequelize.define('products', {
     },
     name: {
         type: DataTypes.STRING,
-        // allowNull: false,
+        allowNull: false,
     },
     price: {
         type: DataTypes.INTEGER,
-        // allowNull: false,
+        allowNull: false,
     },
     img: {
         type: DataTypes.STRING,
     },
     description: {
         type: DataTypes.TEXT,
-        // allowNull: false,
+        allowNull: false,
     },
     category: {
         type: DataTypes.STRING,
-        // allowNull: false,
+        allowNull: false,
     },
     brand: {
         type: DataTypes.STRING,
-        // allowNull: false,
+        allowNull: false,
     },
     stock: {
         type: DataTypes.INTEGER,
