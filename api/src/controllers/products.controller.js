@@ -23,6 +23,7 @@ export const createProducts = async (req, res) => {
             stock,
             availability,
         } = req.body
+        console.log('Datos de la solicitud:', req.body)
 
         const addProducts = await Products.create({
             name,
@@ -35,7 +36,7 @@ export const createProducts = async (req, res) => {
             availability,
         })
 
-        res.status(201).json({ product: addProducts })
+        res.status(201).json(addProducts)
     } catch (error) {
         console.error(error)
         res.status(500).json({ error: 'Error interno del servidor' })
