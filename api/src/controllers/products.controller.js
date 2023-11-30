@@ -1,4 +1,4 @@
-import Products from '../models/products.js'
+import Products from '../models/Products.js'
 
 export const getProducts = async (req, res) => {
     try {
@@ -23,6 +23,7 @@ export const createProducts = async (req, res) => {
             stock,
             availability,
         } = req.body
+
         console.log('Datos de la solicitud:', req.body)
 
         const addProducts = await Products.create({
