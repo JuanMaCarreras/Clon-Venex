@@ -1,6 +1,7 @@
 import Products from '../models/Products.js'
+import { Op } from 'sequelize'
 
-export const getProducts = async (req, res) => {
+export const getAllProducts = async (req, res) => {
     try {
         const allProducts = await Products.findAll()
 
@@ -40,6 +41,14 @@ export const createProducts = async (req, res) => {
         res.status(201).json(addProducts)
     } catch (error) {
         console.error(error)
+        res.status(500).json({ error: 'Error interno del servidor' })
+    }
+}
+
+export const searchProducts = (req, res) => {
+    try {
+        const { name } = req.param
+    } catch (error) {
         res.status(500).json({ error: 'Error interno del servidor' })
     }
 }
