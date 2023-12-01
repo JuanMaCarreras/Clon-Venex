@@ -46,15 +46,15 @@ export const createProducts = async (req, res) => {
 }
 
 export const searchProducts = async (req, res) => {
-    try {
-        const { name } = req.parm
+    const { name } = req.params
 
+    try {
         console.log(req.param)
 
         const queryName = await Products.findAll({
             where: {
                 name: {
-                    [Op.iLike]: `${name}`,
+                    [Op.iLike]: `%${name}%`,
                 },
             },
         })
