@@ -29,6 +29,7 @@ const Products = sequelize.define('products', {
         allowNull: false,
     },
     brand: {
+        //marca
         type: DataTypes.STRING,
         allowNull: false,
     },
