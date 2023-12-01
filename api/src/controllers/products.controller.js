@@ -45,10 +45,29 @@ export const createProducts = async (req, res) => {
     }
 }
 
-export const searchProducts = (req, res) => {
+export const searchProducts = async (req, res) => {
     try {
-        const { name } = req.param
+        const { name } = req.parm
+
+        console.log(req.param)
+
+        const queryName = await Products.findAll({
+            where: {
+                name: {
+                    [Op.iLike]: `${name}`,
+                },
+            },
+        })
+
+        if (queryName.length === 0) {
+            return res
+                .status(404)
+                .json({ error: `Product not found with name, ${name}` })
+        }
+
+        res.status(200).json(queryName)
     } catch (error) {
+        console.error(error)
         res.status(500).json({ error: 'Error interno del servidor' })
     }
 }
