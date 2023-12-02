@@ -49,17 +49,14 @@ export const searchProducts = async (req, res) => {
     const { name } = req.params
 
     try {
-        console.log(req.params)
         const keywords = name.toLowerCase().split(' ')
 
-        // Crear una condición OR para cada palabra clave
         const orConditions = keywords.map(keyword => ({
             name: {
                 [Op.iLike]: `%${keyword}%`,
             },
         }))
 
-        // Realizar la búsqueda con condiciones OR
         const query = await Products.findAll({
             where: {
                 [Op.or]: orConditions,
@@ -74,7 +71,6 @@ export const searchProducts = async (req, res) => {
 
         res.status(200).json(query)
     } catch (error) {
-        console.error(error)
         res.status(500).json({ error: 'Internal Server Error' })
     }
 }
