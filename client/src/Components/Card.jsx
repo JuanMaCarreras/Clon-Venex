@@ -1,12 +1,27 @@
-import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { fetchProducts } from '../redux/slices/productSlice'
 
-function Card({name, price, img, description,}) {
+function Card() {
+
+    const dispatch = useDispatch()
+    const products = useSelector(state => state.products.data)
+
+    console.log(products)
+
+    useEffect(() => {
+
+      dispatch(fetchProducts())
+      console.log( products)
+
+    },[dispatch])
+
+
   return (
     <>
-        <h1>{name}</h1>
-        <img src={img} alt='Imagen del Producto'></img>
-        <p>{price}</p>
-        <p>{description}</p>
+      <h1>Productos</h1>
+    
+    
 
     </>
   )
