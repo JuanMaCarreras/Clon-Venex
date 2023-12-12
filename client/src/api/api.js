@@ -4,7 +4,7 @@ const BASE_URL = 'http://localhost:3000'
 
 export const getAllProducts = async () => {
     const response = await axios.get(`${BASE_URL}/products`)
-    return response
+    return response.data
 }
 
 export const searchProducts = async name => {
