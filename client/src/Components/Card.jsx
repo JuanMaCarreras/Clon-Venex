@@ -2,46 +2,37 @@ import { useDispatch, useSelector } from 'react-redux'
 import React, { useEffect } from 'react'
 import { fetchProducts } from '../redux/slices/productSlice'
 
-function Card() {
+function Card () {
+  const dispatch = useDispatch()
+  const products = useSelector(state => {
+    return state.products.data
+  })
 
-    const dispatch = useDispatch()
-    const products = useSelector(state => {
-      console.log('Estado actualizado:', state.products.data)
-      return state.products.data
-    })
+  useEffect(() => {
+    dispatch(fetchProducts())
+  }, [dispatch])
 
-    useEffect(() => {
-
-      dispatch(fetchProducts())
-        .catch(error => {
-          console.error('Error fetching products in component:', error)
-        })
-
-    },[dispatch])
-
+  console.log(products)
 
   return (
     <>
       <h1>Productos</h1>
 
-
-
       {
-        products ? (
+      products
+        ? (
           <ul>
             {
-              products.map( (product) => {
-                <li key={products.name}>{product.name}</li>
-                
-              })
+              products.map(product => (
+                <li key={product.id}>{product.name}</li>
+              ))
             }
           </ul>
-        ) : (
+          )
+        : (
           <p>cagando...</p>
-        )
+          )
       }
-    
-    
 
     </>
   )
