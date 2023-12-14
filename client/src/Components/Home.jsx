@@ -1,9 +1,11 @@
-import Card from './Card'
+import Footer from './Footer'
 
 function Home () {
   return (
     <>
-      <Card />
+
+      <h1>hola soy el home</h1>
+      <Footer />
     </>
   )
 }
