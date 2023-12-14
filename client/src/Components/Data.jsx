@@ -6,7 +6,6 @@ import Card from './Card'
 function Data () {
   const dispatch = useDispatch()
   const products = useSelector(state => {
-    console.log('Estado redux', state.products.data)
     return state.products.data
   })
   useEffect(() => {
