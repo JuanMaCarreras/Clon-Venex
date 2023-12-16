@@ -1,10 +1,11 @@
 import Footer from './Footer'
+import CardList from './CardList'
 
 function Home () {
   return (
     <>
-
-      <h1>hola soy el home</h1>
+      <CardList />
+      <h1>hola soy el homeASDASDAQWRSF asdsadwe asdqwraxc asdwqrwq</h1>
       <Footer />
     </>
   )
