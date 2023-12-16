@@ -8,7 +8,7 @@ function Card ({ product }) {
   return (
     <>
       <div className='flex flex-col items-center justify-center border-red-600 m-5 py-3 border'>
-        <div className=''>
+        <div className='bg-grey-600'>
           <img src={img} alt='img' className='h-52 w-52 ' />
         </div>
         <div className=''>
