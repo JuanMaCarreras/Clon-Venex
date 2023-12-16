@@ -1,12 +1,10 @@
-// import Home from './components/Home'
-import './App.css'
-import Card from './components/Card'
+// import Card from './components/Card.jsx'
+import Home from './components/Home.jsx'
 
 function App () {
   return (
     <>
-      {/* <Home /> */}
-      <Card />
+      <Home />
     </>
   )
 }
