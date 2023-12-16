@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import React, { useEffect } from 'react'
-import { fetchProducts } from '../redux/slices/productSlice'
-import Card from './Card'
+import { fetchProducts } from '../redux/slices/productSlice.js'
+import Card from './Card.jsx'
 
 function Data () {
   const dispatch = useDispatch()
@@ -17,14 +17,16 @@ function Data () {
       {
       products
         ? products.map(product => (
-          <Card key={product.id} product={product} />
+          <Card
+            key={product.id}
+            product={product}
+          />
 
         ))
         : (
           <p>cagando...</p>
           )
       }
-
     </>
   )
 }
