@@ -4,6 +4,10 @@ function SearchBar () {
   return (
     <>
       <h2>Search Bar</h2>
+
+      <input name='search' />
+      <label />
+
     </>
   )
 }
