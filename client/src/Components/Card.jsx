@@ -3,15 +3,15 @@ function Card ({ product }) {
     return null
   }
 
-  const { img, price } = product
+  const { img, price, name } = product
 
   return (
     <>
-      <div className='flex flex-col items-center justify-center border-red-600 m-5 py-5 border-'>
+      <article className='flex flex-col items-center justify-center border-red-600 m-5 py-5 border-'>
         <img src={img} alt='img' className='h-52 w-52 ' />
         <h2 className='text-2xl font-medium'>${price}</h2>
-        {/* <h3 className='text-sm text-gray-500'>{name}</h3> */}
-      </div>
+        <h3 className='text-sm text-gray-500'>{name}</h3>
+      </article>
     </>
   )
 }
