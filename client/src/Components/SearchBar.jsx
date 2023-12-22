@@ -1,34 +1,44 @@
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { searchProduct } from '../redux/slices/productSlice'
 
 function SearchBar () {
   const dispatch = useDispatch()
-
-  const [search, setSearch] = useState('')
+  const searchedProduct = useSelector((state) => state.products.searchedProduct)
+  const [prductName, setPrductName] = useState('')
 
   const handlerChange = (e) => {
-    const input = e.target.value
-    console.log(input)
-    setSearch(input)
+    const value = e.target.value
+    console.log(value)
+    setPrductName(value)
+    console.log(searchedProduct)
   }
 
   const handlerSubmit = (e) => {
     e.preventDefault()
+    dispatch(searchProduct(prductName))
   }
 
   return (
     <>
       <h2>Search Bar</h2>
-      <form onSubmit={handlerSubmit}>
-        <input
-          name='search'
-          type='text'
-          onChange={handlerChange}
 
-        />
+      <input
+        type='text'
+        value={prductName}
+        onChange={handlerChange}
+        className='border border-red-500'
+      />
 
-        <button type='submit'>Buscar</button>
-      </form>
+      <button type='submit' onClick={handlerSubmit}>Buscar</button>
+
+      {searchedProduct && (
+        <div>
+          <h2>{searchedProduct.name}</h2>
+          <p>{searchedProduct.img}</p>
+          <p>Precio: {searchedProduct.price}</p>
+        </div>
+      )}
 
     </>
   )
