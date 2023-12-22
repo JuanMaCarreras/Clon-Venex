@@ -12,9 +12,9 @@ export const fetchProducts = createAsyncThunk('/products/fetchProducts', async (
 }
 )
 
-export const searchProduct = createAsyncThunk('/products/searchProducts', async () => {
+export const searchProduct = createAsyncThunk('/products/searchProducts', async (productName) => {
   try {
-    const res = await searchProducts()
+    const res = await searchProducts(productName)
     return res
   } catch (error) {
     console.log(error)
@@ -25,7 +25,8 @@ export const searchProduct = createAsyncThunk('/products/searchProducts', async 
 const initialState = {
   data: [],
   status: '',
-  error: null
+  error: null,
+  searchProduct: []
 }
 
 const productSlice = createSlice({
@@ -33,10 +34,15 @@ const productSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: builder => {
-    builder.addCase(fetchProducts.fulfilled, (state, action) => {
-      state.status = 'succeeded'
-      state.data = action.payload
-    })
+    builder
+      .addCase(fetchProducts.fulfilled, (state, action) => {
+        state.status = 'succeeded'
+        state.data = action.payload
+      })
+      .addCase(searchProduct.fulfilled, (state, action) => {
+        state.status = 'succeeded'
+        state.searchProduct = action.payload
+      })
   }
 })
 
