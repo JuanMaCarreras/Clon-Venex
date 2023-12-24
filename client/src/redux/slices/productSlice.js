@@ -25,7 +25,7 @@ export const searchProduct = createAsyncThunk('/products/searchProducts', async 
 const initialState = {
   data: [],
   status: '',
-  error: null,
+  error: '',
   searchProduct: []
 }
 
