@@ -39,6 +39,9 @@ const productSlice = createSlice({
         state.status = 'succeeded'
         state.data = action.payload
       })
+      .addCase(searchProduct.error, (state, action) => {
+        state.status = 'error'
+      })
       .addCase(searchProduct.fulfilled, (state, action) => {
         state.status = 'succeeded'
         state.searchProduct = action.payload
