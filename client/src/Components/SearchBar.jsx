@@ -37,9 +37,6 @@ function SearchBar () {
       searchedProduct && (
         <div>
           <h2>{searchedProduct.name}</h2>
-          <p>{searchedProduct.img}</p>
-          <p>Precio: {searchedProduct.price}</p>
-          console.log(searchedProduct)
         </div>
       )
       }
