@@ -1,5 +1,5 @@
 import Footer from './Footer'
-import CardList from './CardList'
+// import CardList from './CardList'
 import SearchBar from './SearchBar'
 
 function Home () {
@@ -7,7 +7,7 @@ function Home () {
     <>
       <SearchBar />
 
-      <CardList />
+      {/* <CardList /> */}
       <h1>hola soy el homeASDASDAQWRSF asdsadwe asdqwraxc asdwqrwq</h1>
       <Footer />
     </>
