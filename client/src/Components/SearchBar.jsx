@@ -11,12 +11,13 @@ function SearchBar () {
     const value = e.target.value
     console.log(value)
     setPrductName(value)
-    console.log(searchedProduct)
+    console.log(prductName)
   }
 
   const handlerSubmit = (e) => {
     e.preventDefault()
     dispatch(searchProduct(prductName))
+    console.log(searchedProduct)
   }
 
   return (
@@ -32,13 +33,16 @@ function SearchBar () {
 
       <button type='submit' onClick={handlerSubmit}>Buscar</button>
 
-      {searchedProduct && (
+      {
+      searchedProduct && (
         <div>
           <h2>{searchedProduct.name}</h2>
           <p>{searchedProduct.img}</p>
           <p>Precio: {searchedProduct.price}</p>
+          console.log(searchedProduct)
         </div>
-      )}
+      )
+      }
 
     </>
   )

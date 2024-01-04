@@ -12,20 +12,20 @@ export const fetchProducts = createAsyncThunk('/products/fetchProducts', async (
 }
 )
 
-export const searchProduct = createAsyncThunk('/products/searchProducts', async (productName) => {
+export const searchProduct = createAsyncThunk('/products/searchProducts', async (productName, { rejectedWithValue }) => {
   try {
     const res = await searchProducts(productName)
     return res
   } catch (error) {
     console.log(error)
-    throw error
+    return rejectedWithValue(error)
   }
 })
 
 const initialState = {
   data: [],
-  status: '',
-  error: '',
+  status: null,
+  error: null,
   searchProduct: []
 }
 
@@ -39,12 +39,14 @@ const productSlice = createSlice({
         state.status = 'succeeded'
         state.data = action.payload
       })
-      .addCase(searchProduct.error, (state, action) => {
-        state.status = 'error'
-      })
       .addCase(searchProduct.fulfilled, (state, action) => {
         state.status = 'succeeded'
         state.searchProduct = action.payload
+        state.error = null
+      })
+      .addCase(searchProduct.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.payload
       })
   }
 })
