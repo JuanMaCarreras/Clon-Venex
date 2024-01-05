@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import CardList from './CardList'
 import { useDispatch, useSelector } from 'react-redux'
 import { searchProduct } from '../redux/slices/productSlice'
 
 function SearchBar () {
   const dispatch = useDispatch()
-  const searchedProduct = useSelector((state) => state.products.searchedProduct)
+  const searchedProduct = useSelector((state) => state.products.searchProduct)
   const [prductName, setPrductName] = useState('')
 
   const handlerChange = (e) => {
@@ -34,11 +35,11 @@ function SearchBar () {
       <button type='submit' onClick={handlerSubmit}>Buscar</button>
 
       {
-      searchedProduct && (
-        <div>
-          <h2>{searchedProduct.name}</h2>
-        </div>
-      )
+      searchedProduct.map(product => (
+        <CardList
+          key={product.id}
+        />
+      ))
       }
 
     </>
