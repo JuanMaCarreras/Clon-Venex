@@ -40,6 +40,7 @@ const productSlice = createSlice({
         state.data = action.payload
       })
       .addCase(searchProduct.fulfilled, (state, action) => {
+        console.log('Action Payload SearchBar:', action.payload)
         state.status = 'succeeded'
         state.searchProduct = action.payload
         state.error = null
