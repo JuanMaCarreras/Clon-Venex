@@ -25,8 +25,7 @@ export const searchProduct = createAsyncThunk('/products/searchProducts', async 
 const initialState = {
   data: [],
   status: null,
-  error: null,
-  searchProduct: []
+  error: null
 }
 
 const productSlice = createSlice({
@@ -40,9 +39,8 @@ const productSlice = createSlice({
         state.data = action.payload
       })
       .addCase(searchProduct.fulfilled, (state, action) => {
-        console.log('Action Payload SearchBar:', action.payload)
         state.status = 'succeeded'
-        state.searchProduct = action.payload
+        state.data = action.payload
         state.error = null
       })
       .addCase(searchProduct.rejected, (state, action) => {
