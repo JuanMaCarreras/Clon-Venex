@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import CardList from './CardList'
+import Data from './Data'
 import { useDispatch, useSelector } from 'react-redux'
 import { searchProduct } from '../redux/slices/productSlice'
 
@@ -10,15 +10,13 @@ function SearchBar () {
 
   const handlerChange = (e) => {
     const value = e.target.value
-    console.log(value)
     setPrductName(value)
-    console.log(prductName)
   }
 
   const handlerSubmit = (e) => {
     e.preventDefault()
     dispatch(searchProduct(prductName))
-    console.log(searchedProduct)
+    searchProduct(' ')
   }
 
   return (
@@ -36,7 +34,7 @@ function SearchBar () {
 
       {
       searchedProduct.map(product => (
-        <CardList
+        <Data
           key={product.id}
         />
       ))
