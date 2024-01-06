@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import { useDispatch /* useSelector */ } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { searchProduct } from '../redux/slices/productSlice'
 
 function SearchBar () {
   const dispatch = useDispatch()
-  // const searchedProduct = useSelector((state) => state.products.searchProduct)
   const [prductName, setPrductName] = useState('')
 
   const handlerChange = (e) => {
@@ -30,16 +29,6 @@ function SearchBar () {
       />
 
       <button type='submit' onClick={handlerSubmit}>Buscar</button>
-
-      {/* {
-      searchedProduct.map(product => (
-        <div key={product.id}>
-          <img src={product.img} alt={product.name} />
-          <p>{product.price}</p>
-          <p>{product.name}</p>
-        </div>
-      ))
-      } */}
 
     </>
   )
