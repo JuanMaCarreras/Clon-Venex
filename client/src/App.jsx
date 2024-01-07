@@ -1,10 +1,14 @@
-// import Card from './components/Card.jsx'
+import CreateProducts from './components/CreateProduct'
+import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home.jsx'
 
 function App () {
   return (
     <>
-      <Home />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/create_products' element={<CreateProducts />} />
+      </Routes>
     </>
   )
 }
