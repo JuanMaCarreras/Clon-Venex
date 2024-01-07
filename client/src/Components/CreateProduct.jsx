@@ -3,6 +3,7 @@
 function CreateProduct () {
   const handleInputChange = (e) => {
     e.preventDefault()
+    console.log(e.value.target)
   }
 
   const handleSubmit = () => {
