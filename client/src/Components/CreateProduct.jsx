@@ -1,6 +1,8 @@
-// import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 function CreateProduct () {
+  const dispatch = useDispatch()
+
   const handleInputChange = (e) => {
     e.preventDefault()
     console.log(e.value.target)
@@ -17,6 +19,7 @@ function CreateProduct () {
         <label>Name:</label>
         <input
           type='text'
+          name='name'
           onChange={handleInputChange}
           className='border border-blue-700'
         />
@@ -24,6 +27,7 @@ function CreateProduct () {
         <label>Price:</label>
         <input
           type='text'
+          name='price'
           onChange={handleInputChange}
           className='border border-blue-700'
         />
@@ -32,22 +36,16 @@ function CreateProduct () {
         <input type='text' /> */}
 
         <label>Description:</label>
-        <input
-          type='text'
-          onChange={handleInputChange}
+        <textarea
+          name='description'
           className='border border-blue-700'
-        />
-
-        <label>Category:</label>
-        <input
-          type='text'
           onChange={handleInputChange}
-          className='border border-blue-700'
         />
 
         <label>Brand:</label>
         <input
           type='text'
+          name='brand'
           onChange={handleInputChange}
           className='border border-blue-700'
         />
@@ -55,6 +53,7 @@ function CreateProduct () {
         <label>Stock:</label>
         <input
           type='text'
+          name='stock'
           onChange={handleInputChange}
           className='border border-blue-700'
         />
@@ -62,6 +61,7 @@ function CreateProduct () {
         <label>Availability:</label>
         <input
           type='text'
+          name='availability'
           onChange={handleInputChange}
           className='border border-blue-700'
         />
