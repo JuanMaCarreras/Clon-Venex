@@ -17,7 +17,6 @@ export const searchProduct = createAsyncThunk('/products/searchProducts', async 
     const res = await searchProducts(productName)
     return res
   } catch (error) {
-    console.log(error)
     return rejectedWithValue(error)
   }
 })
