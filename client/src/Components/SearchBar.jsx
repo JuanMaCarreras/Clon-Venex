@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { searchProduct } from '../redux/slices/productSlice'
+import { searchProduct } from '../redux/actions/productsActions'
 
 function SearchBar () {
   const dispatch = useDispatch()
