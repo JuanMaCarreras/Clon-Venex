@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import React, { useEffect } from 'react'
-import { fetchProducts } from '../redux/slices/productSlice.js'
+import { fetchProducts } from '../redux/actions/productsActions'
 import Card from './Card.jsx'
 
 function Data () {
