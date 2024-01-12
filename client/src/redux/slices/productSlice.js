@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchProducts, searchProduct } from '../actions/productsActions'
+import { fetchProducts, searchProduct, productsForm } from '../actions/productsActions'
 
 const initialState = {
   data: [],
@@ -16,6 +16,11 @@ const productSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = 'succeeded'
         state.data = action.payload
+        state.error = null
+      })
+      .addCase(fetchProducts.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.payload
       })
       .addCase(searchProduct.fulfilled, (state, action) => {
         state.status = 'succeeded'
@@ -23,6 +28,15 @@ const productSlice = createSlice({
         state.error = null
       })
       .addCase(searchProduct.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.payload
+      })
+      .addCase(productsForm.fulfilled, (state, action) => {
+        state.status = 'succeeded'
+        state.data.push(action.payload)
+        state.error = null
+      })
+      .addCase(productsForm.rejected, (state, action) => {
         state.status = 'failed'
         state.error = action.payload
       })
