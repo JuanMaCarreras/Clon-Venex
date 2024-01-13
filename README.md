@@ -25,3 +25,5 @@ Backend: Node.js (Express, Sequelize).
 Base de Datos: PostgreSQL.
 
 Seguridad: Protocolo HTTPS, autenticación de usuarios, encriptación de datos.
+
+Se agreda formulario para la creacion de productos desde el Front-End. Sera visible solo por usuarios admins (futuras creacion de usuarios con Auth0)
