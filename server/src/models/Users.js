@@ -15,6 +15,10 @@ const Users = sequelize.define('users', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    img: {
+        type: DataTypes.STRING,
+        defaultValue: 'https://icon-library.com/images/default-user-icon/default-user-icon-13.jpg'
+    }
 })
 
 export default Users
