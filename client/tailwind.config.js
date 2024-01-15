@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         primaryGray: '#37373f',
-        secondaryGray: '#2d2d33'
+        secondaryGray: '#2d2d33',
+        venex: '#91c612'
 
       }
     }
