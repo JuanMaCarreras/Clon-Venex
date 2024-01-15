@@ -1,11 +1,11 @@
 import Footer from './Footer'
 import CardList from './CardList'
-import SearchBar from './SearchBar'
+import NavBar from './NavBar'
 
 function Home () {
   return (
     <>
-      <SearchBar />
+      <NavBar />
 
       <CardList />
       <h1>hola soy el homeASDASDAQWRSF asdsadwe asdqwraxc asdwqrwq</h1>
