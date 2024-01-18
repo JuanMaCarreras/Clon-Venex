@@ -6,7 +6,6 @@ function Home () {
   return (
     <>
       <NavBar />
-
       <CardList />
       <h1>hola soy el homeASDASDAQWRSF asdsadwe asdqwraxc asdwqrwq</h1>
       <Footer />
