@@ -37,6 +37,7 @@ function SearchBar () {
           className='bg-white rounded-r-lg w-10 pr-11'
         ><FaMagnifyingGlass className='w-10 h-6 text-primaryGray ' />
         </button>
+
       </div>
     </>
   )
