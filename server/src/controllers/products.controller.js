@@ -63,7 +63,7 @@ export const searchProducts = async (req, res) => {
             },
         })
 
-        if (query.length === 0) {
+        if (!query) {
             return res
                 .status(404)
                 .json({ error: `Product not found with name, ${name}` })
@@ -73,4 +73,29 @@ export const searchProducts = async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error' })
     }
+}
+
+
+export const getProductsById = async (req, res) => {
+    try {
+        const { id } = req.params
+
+
+        const idProduct = await Products.findByPk({
+            id
+        })
+
+        if (!idProduct) {
+            return res.status(404).json({ error: 'Country not found' })
+        }
+
+        res.status(200).json(idProduct)
+
+
+
+    } catch (error) {
+        res.status(500).json({ error: 'Internal Server Error' })
+    }
+
+
 }
