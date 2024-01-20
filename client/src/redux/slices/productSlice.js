@@ -1,5 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchProducts, searchProduct, productsForm } from '../actions/productsActions'
+import {
+  fetchProducts,
+  searchProduct,
+  productsForm,
+  idProduct
+} from '../actions/productsActions'
 
 const initialState = {
   data: [],
@@ -39,6 +44,12 @@ const productSlice = createSlice({
       .addCase(productsForm.rejected, (state, action) => {
         state.status = 'failed'
         state.error = action.payload
+      })
+
+      .addCase(idProduct.fulfilled, (state, action) => {
+        state.status = 'succeeded'
+        state.data = action.payload
+        state.error = null
       })
   }
 })
