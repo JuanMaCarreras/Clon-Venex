@@ -17,3 +17,8 @@ export const createProducts = async productData => {
   const response = await axios.post(`${BASE_URL}/products`, productData)
   return response.data
 }
+
+export const productID = async id => {
+  const response = await axios.get(`${BASE_URL}/products/${id}`)
+  return response.data
+}
