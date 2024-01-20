@@ -1,5 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { getAllProducts, searchProducts, createProducts } from '../../api/api'
+import {
+  getAllProducts,
+  searchProducts,
+  createProducts,
+  productID
+} from '../../api/api'
 
 export const fetchProducts = createAsyncThunk('/products/fetchProducts', async () => {
   try {
@@ -21,9 +26,19 @@ export const searchProduct = createAsyncThunk('/products/searchProducts', async 
   }
 })
 
-export const productsForm = createAsyncThunk('/creteProducts', async (productData) => {
+export const productsForm = createAsyncThunk('/creteProducts', async productData => {
   try {
     const res = await createProducts(productData)
+    return res
+  } catch (error) {
+    console.log(error)
+    throw error
+  }
+})
+
+export const idProduct = createAsyncThunk('/id', async id => {
+  try {
+    const res = await productID(id)
     return res
   } catch (error) {
     console.log(error)
