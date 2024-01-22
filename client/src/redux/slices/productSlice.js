@@ -3,11 +3,12 @@ import {
   fetchProducts,
   searchProduct,
   productsForm,
-  idProduct
+  getProductById
 } from '../actions/productsActions'
 
 const initialState = {
   data: [],
+  details: [],
   status: null,
   error: null
 }
@@ -46,10 +47,14 @@ const productSlice = createSlice({
         state.error = action.payload
       })
 
-      .addCase(idProduct.fulfilled, (state, action) => {
+      .addCase(getProductById.fulfilled, (state, action) => {
         state.status = 'succeeded'
-        state.data = action.payload
+        state.details = action.payload
         state.error = null
+      })
+      .addCase(getProductById.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.payload
       })
   }
 })
