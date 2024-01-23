@@ -5,13 +5,13 @@ import { getProductById } from '../redux/actions/productsActions'
 
 function ProductDetails () {
   const dispatch = useDispatch()
-  const details = useSelector(state => state.products.details)
+  const details = useSelector(state => state.products)
   const { productid } = useParams()
-  console.log(productid)
   console.log(useParams())
 
   useEffect(() => {
     dispatch(getProductById(productid))
+    console.log(productid)
   }, [dispatch, productid])
 
   return (
