@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-// CAMBIAR URL DEL BACK (DEPLOY DB)
+// CAMBIAR URL DEL BACK (DEPLOY Back)
 const BASE_URL = 'http://localhost:3000'
 
 export const getAllProducts = async () => {
