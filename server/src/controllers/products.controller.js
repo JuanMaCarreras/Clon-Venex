@@ -75,23 +75,20 @@ export const searchProducts = async (req, res) => {
 
 
 export const getProductsById = async (req, res) => {
-
-    const { id } = req.params
-
     try {
 
-        console.log('Searching for product with ID:', id)
+        const { idddd } = req.params
 
-        const idProduct = await Products.findOne({
-            where: {
-                id: id
-            }
-        })
+        console.log(req.params)
+        console.log('Searching for product with ID:', idddd)
 
-        if (!idProduct) {
+        const productID = await Products.findByPk(idddd)
+
+        if (!productID) {
             return res.status(404).json({ error: 'Product not found' })
         }
-        res.status(200).json(idProduct)
+
+        res.status(201).json(productID)
 
 
 
