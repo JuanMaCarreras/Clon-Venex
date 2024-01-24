@@ -9,16 +9,16 @@ dotenv.config()
 const app = express()
 
 //Auth0
-// const { CLIENT_ID, SECRET, DOMAIN } = process.env
+const { CLIENT_ID, SECRET, DOMAIN } = process.env
 
-// const config = {
-//     authRequired: false,
-//     auth0Logout: true,
-//     secret: { SECRET },
-//     baseURL: 'http://localhost:3000',
-//     clientID: { CLIENT_ID },
-//     issuerBaseURL: { DOMAIN }
-// }
+const config = {
+    authRequired: false,
+    auth0Logout: true,
+    secret: { SECRET },
+    baseURL: 'http://localhost:3000',
+    clientID: { CLIENT_ID },
+    issuerBaseURL: { DOMAIN }
+}
 
 // Middleware
 app.use(morgan('dev'))
@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 
 //Auth0
-// app.use(auth(config))
+app.use(auth(config))
 
 app.use(productsRouters)
 
