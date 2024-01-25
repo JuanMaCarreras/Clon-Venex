@@ -34,7 +34,7 @@ function SearchBar () {
         <button
           type='submit'
           onClick={handlerSubmit}
-          className='bg-white rounded-r-lg w-10 pr-11'
+          className='bg-white rounded-r-md w-10 pr-11'
         ><FaMagnifyingGlass className='w-10 h-6 text-primaryGray ' />
         </button>
 
