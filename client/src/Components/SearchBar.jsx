@@ -28,7 +28,7 @@ function SearchBar () {
           value={prductName}
           onChange={handlerChange}
           placeholder='Eso que querés.. buscalo acá'
-          className='w-1/2 h-11 rounded-l-md outline-none px-4'
+          className='w-600px h-41px rounded-l-md outline-none px-4'
         />
 
         <button
