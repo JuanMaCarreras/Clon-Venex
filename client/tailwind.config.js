@@ -12,15 +12,13 @@ export default {
         venex: '#91c612'
 
       },
-      height: {
-        300: '353px',
-        90: '10rem'
-      },
-      padding: {
-        mypd: '16px',
-        'py-20': '20px',
-        'py-30': '30px'
+      spacing: {
+        '16px': '16px',
+        '300px': '353px',
+        '41px': '41px',
+        '600px': '595px'
       }
+
     },
     plugins: []
   }
