@@ -1,7 +1,7 @@
 function FilterNavBar () {
   return (
     <>
-      <ul className='flex flex-row justify-between py-mypd px-14'>
+      <ul className='flex flex-row justify-between py-16px px-14'>
         <li className='font-semibold'>CATEGORÍAS</li>
         <li>PCs de Escritorio</li>
         <li>Notebooks</li>
