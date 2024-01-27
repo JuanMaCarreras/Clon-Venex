@@ -15,8 +15,8 @@ export default {
       spacing: {
         '16px': '16px',
         '300px': '353px',
-        '41px': '41px',
-        '600px': '595px'
+        '41px': '42px',
+        '600px': '593px'
       }
 
     },
