@@ -9,7 +9,7 @@ function FilterNavBar () {
         <li>Monitores</li>
         <li>Micros</li>
         <li>¡Imperdibles!</li>
-        <li>|Arma tu PC|</li>
+        <li>| Arma tu PC |</li>
         <li className='font-semibold'>VX | CORPORATIVO</li>
       </ul>
     </>
