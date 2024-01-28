@@ -28,13 +28,13 @@ function SearchBar () {
           value={prductName}
           onChange={handlerChange}
           placeholder='Eso que querés.. buscalo acá'
-          className='w-600px h-41px rounded-l-md outline-none px-4'
+          className='w-600px h-41px rounded-l-md outline-none px-4 border-1 border-gray-300'
         />
 
         <button
           type='submit'
           onClick={handlerSubmit}
-          className='bg-white rounded-r-md w-10 pr-11'
+          className='bg-white rounded-r-md border-1 border-gray-300 w-10 pr-11'
         ><FaMagnifyingGlass className='w-10 h-6 text-primaryGray ' />
         </button>
 
