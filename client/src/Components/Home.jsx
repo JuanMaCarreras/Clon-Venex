@@ -11,7 +11,7 @@ function Home () {
       <FilterNavBar />
       <SliderImg />
       <CardList />
-      <h1>HOLA SOY EL HOME</h1>
+      <h1 className='font-hook text-2xl pb-96'>HOLA SOY EL HOME</h1>
       <Footer />
     </>
   )
