@@ -10,13 +10,13 @@ function TopBar () {
       >
         <ul className='flex text-white'>
           <li><FaRoute className='w-4 h-6 text-venex ' /></li>
-          <li className='pr-14 pl-3 font-serif'> Seguí tu compra  </li>
+          <li className='pr-11 pl-3 text-15px font-montserrat'> Seguí tu compra  </li>
 
           <li><PiMapPinFill className='w-5 h-6 text-venex' /></li>
-          <li className='pr-14 pl-3'> Retirá tu compra </li>
+          <li className='pr-11 pl-3 text-15px font-montserrat'> Retirá tu compra </li>
 
           <li><BsHeadset className='w-5 h-6 text-venex' /></li>
-          <li className='pr-11 pl-3'>Centro de Ayuda</li>
+          <li className='pr-9 pl-3 text-15px font-montserrat'>Centro de Ayuda</li>
         </ul>
 
       </div>
