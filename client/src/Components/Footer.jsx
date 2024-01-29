@@ -8,15 +8,15 @@ function Footer () {
     <>
       <PartnersList />
       <FooterMenu />
-      <div className='flex flex-row justify-between pt-16 pb-24 px-14 bg-primaryGray'>
+      <div className='flex flex-row justify-between pt-11 pb-24 pl-11 bg-primaryGray'>
         <div className='font-montserrat'>
           <p className='text-venex font-semibold'>ATENCIÓN AL CLIENTE:</p>
-          <p className='text-white mt-5'>0810-555-8892</p>
+          <p className='text-white mt-4'>0810-555-8893</p>
           <p className='text-white'> consultas@venex.com.ar </p>
           <p className='text-white'>WhatsApp +54 11 2040-0949</p>
           <p className='text-white'>Lunes a viernes de 8 a 18hs.</p>
-          <p className='text-venex font-semibold mt-10'>VENEX PICKUP POINT</p>
-          <p className='text-white mt-5'> <strong> Buenos Aires:</strong> Lunes a Viernes de 10 a 17h.</p>
+          <p className='text-venex font-semibold mt-11'>VENEX PICKUP POINT</p>
+          <p className='text-white mt-4'> <strong> Buenos Aires:</strong> Lunes a Viernes de 10 a 17h.</p>
           <p className='text-white mt-2'><strong>Córdoba:</strong> Lunes a Viernes de 10 a 18h.</p>
         </div>
         <div>
@@ -62,7 +62,7 @@ function Footer () {
           />
         </div>
       </div>
-      <p className='flex justify-center bg-primaryGray pb-5 text-white'>Copyright © 2023 - Venex. Buenos Aires, Argentina.</p>
+      <p className='flex justify-center bg-primaryGray pb-5 text-white'>Copyright &copy; {new Date().getFullYear()} - Venex. Buenos Aires, Argentina.</p>
     </>
   )
 }
