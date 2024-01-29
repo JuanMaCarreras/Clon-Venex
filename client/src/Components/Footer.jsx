@@ -1,10 +1,16 @@
-import React from 'react'
+import PartnersList from './PartnersList'
+import FooterMenu from './FooterMenu'
 
 function Footer () {
   return (
     <>
-
-      <h1>El Footer</h1>
+      <PartnersList />
+      <FooterMenu />
+      <div className='my-96'>
+        <div>
+          <p>asd</p>
+        </div>
+      </div>
     </>
   )
 }

@@ -10,9 +10,7 @@ export default {
         primaryGray: '#37373f',
         secondaryGray: '#2d2d33',
         venex: '#91c612',
-        font: '#37373f',
         white: '#eeeeee'
-
       },
       spacing: {
         '16px': '16px',

@@ -7,31 +7,31 @@ function FilterNavBar () {
         >CATEGORÍAS
         </li>
         <li
-          className='font-montserrat text-font '
+          className='font-montserrat text-primaryGray '
         >PCs de Escritorio
         </li>
         <li
-          className='font-montserrat text-font'
+          className='font-montserrat text-primaryGray'
         >Notebooks
         </li>
         <li
-          className='font-montserrat text-font'
+          className='font-montserrat text-primaryGray'
         >Placas de Videos
         </li>
         <li
-          className='font-montserrat text-font'
+          className='font-montserrat text-primaryGray'
         >Monitores
         </li>
         <li
-          className='font-montserrat text-font'
+          className='font-montserrat text-primaryGray'
         >Micros
         </li>
         <li
-          className='font-montserrat text-font'
+          className='font-montserrat text-primaryGray'
         >¡Imperdibles!
         </li>
         <li
-          className='font-montserrat text-font'
+          className='font-montserrat text-primaryGray'
         >
           | Arma tu PC |
         </li>
