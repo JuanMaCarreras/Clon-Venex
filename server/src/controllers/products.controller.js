@@ -77,12 +77,12 @@ export const searchProducts = async (req, res) => {
 export const getProductsById = async (req, res) => {
     try {
 
-        const { idddd } = req.params
+        const { id } = req.params
 
         console.log(req.params)
-        console.log('Searching for product with ID:', idddd)
+        console.log('Searching for product with ID:', id)
 
-        const productID = await Products.findByPk(idddd)
+        const productID = await Products.findByPk(id)
 
         if (!productID) {
             return res.status(404).json({ error: 'Product not found' })
@@ -95,6 +95,35 @@ export const getProductsById = async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error' })
     }
+
+
+}
+
+
+export const getCategory = async (req, res) => {
+
+    const { category } = req.params
+
+    try {
+
+
+        if (!category) {
+            res.status(404).json({ error: 'Category not found' })
+        }
+
+        const filteredCategory = await Products.findAll({
+            where: {
+                category,
+            }
+        })
+
+        res.status(200).json(filteredCategory)
+
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ error: 'Internal Server Error' })
+    }
+
 
 
 }
