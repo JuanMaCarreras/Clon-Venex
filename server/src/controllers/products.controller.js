@@ -127,3 +127,29 @@ export const getCategory = async (req, res) => {
 
 
 }
+
+export const getBrand = async (req, res) => {
+
+    const { brand } = req.params
+
+    try {
+
+        if (!brand) {
+            res.status(404).json({ error: 'Brand not found' })
+        }
+
+        const filteredBrand = await Products.fildAll({
+            where: {
+                brand,
+            }
+        })
+
+        res.status(200).json(filteredBrand)
+
+
+    } catch (error) {
+        res.status(500).json({ error: 'Internal Server Error' })
+    }
+
+
+}
