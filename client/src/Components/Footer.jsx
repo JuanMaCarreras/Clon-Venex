@@ -55,11 +55,13 @@ function Footer () {
             src='https://www.afip.gob.ar/images/f960/DATAWEB.jpg'
             alt='#'
           />
-          <img
-            className='h-11 w-20 mt-4'
-            src='https://www.venex.com.ar/images/sello-cace-venex.png'
-            alt='#'
-          />
+          <a href='https://cace.org.ar/'>
+            <img
+              className='h-11 w-20 mt-4'
+              src='https://www.venex.com.ar/images/sello-cace-venex.png'
+              alt='#'
+            />
+          </a>
         </div>
       </div>
       <p className='flex justify-center bg-primaryGray pb-5 text-white'>Copyright &copy; {new Date().getFullYear()} - Venex. Buenos Aires, Argentina.</p>
