@@ -138,7 +138,7 @@ export const getBrand = async (req, res) => {
             res.status(404).json({ error: 'Brand not found' })
         }
 
-        const filteredBrand = await Products.fildAll({
+        const filteredBrand = await Products.findAll({
             where: {
                 brand,
             }
