@@ -39,6 +39,7 @@ export const createProducts = async (req, res) => {
         })
 
         res.status(201).json(addProducts)
+
     } catch (error) {
         console.error(error)
         res.status(500).json({ error: 'Internal Server Error' })
@@ -63,11 +64,11 @@ export const searchProducts = async (req, res) => {
             },
         })
 
-        if (!query) {
-            return res.status(404).json({ error: `Product not found with name, ${name}` })
-        }
+        return query.length
+            ? res.status(200).json(query)
+            : res.status(404).json({ error: `Product not found with name, ${name}` })
 
-        res.status(200).json(query)
+
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error' })
     }
@@ -79,16 +80,15 @@ export const getProductsById = async (req, res) => {
 
         const { id } = req.params
 
-        console.log(req.params)
-        console.log('Searching for product with ID:', id)
+        const productID = await Products.findAll({
+            where: {
+                id,
+            }
+        })
 
-        const productID = await Products.findByPk(id)
-
-        if (!productID) {
-            return res.status(404).json({ error: 'Product not found' })
-        }
-
-        res.status(201).json(productID)
+        return productID.length
+            ? res.status(200).json(productID)
+            : res.status(404).json({ error: 'Product not found' });
 
 
 

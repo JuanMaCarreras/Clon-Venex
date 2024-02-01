@@ -11,7 +11,7 @@ import {
 const router = Router()
 
 router.get('/products', getAllProducts)
-router.get('products/:id', getProductsById)
+router.get('/products/:id', getProductsById)
 router.get('/products/:name', searchProducts)
 router.get('/products/category/:category', getCategory)
 router.get('/products/brand/:brand', getBrand)
