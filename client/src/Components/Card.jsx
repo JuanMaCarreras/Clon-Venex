@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom'
 
-function Card ({ product, id }) {
+function Card ({ product }) {
   if (!product) {
     return null
   }
 
-  const { img, price, name } = product
+  const { id, img, price, name } = product
 
   return (
     <>
