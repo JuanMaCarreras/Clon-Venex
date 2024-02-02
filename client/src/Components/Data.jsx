@@ -5,9 +5,7 @@ import Card from './Card.jsx'
 
 function Data () {
   const dispatch = useDispatch()
-  const products = useSelector(state => {
-    return state.products.data
-  })
+  const products = useSelector(state => state.products.data)
   useEffect(() => {
     dispatch(fetchProducts())
   }, [dispatch])
