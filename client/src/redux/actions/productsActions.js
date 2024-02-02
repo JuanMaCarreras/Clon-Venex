@@ -36,9 +36,9 @@ export const productsForm = createAsyncThunk('/creteProducts', async productData
   }
 })
 
-export const getProductById = createAsyncThunk('/:id', async productid => {
+export const getProductById = createAsyncThunk('/:id', async productId => {
   try {
-    const res = await productID(productid)
+    const res = await productID(productId)
     return res
   } catch (error) {
     console.log(error)
