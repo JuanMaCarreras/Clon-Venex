@@ -4,21 +4,25 @@ import { useParams } from 'react-router-dom'
 import { getProductById } from '../redux/actions/productsActions'
 
 function ProductDetails () {
-  const dispatch = useDispatch()
-  const details = useSelector(state => state.products.details)
   const { productId } = useParams()
-  console.log(useParams())
+  console.log(productId)
+  const dispatch = useDispatch()
+  const details = useSelector(state => state.products)
 
   useEffect(() => {
     dispatch(getProductById(productId))
-    console.log(productId)
   }, [dispatch, productId])
 
   return (
     <>
       {
-        details && <h1>{ProductDetails.name}</h1>
-
+      details && details.map(detail => (
+        <div key={detail.id}>
+          <h2>{detail.name}</h2>
+          <p>{detail.description}</p>
+          <p>Precio: ${detail.price}</p>
+        </div>
+      ))
       }
     </>
   )
