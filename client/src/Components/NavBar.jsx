@@ -1,7 +1,8 @@
 import SearchBar from './SearchBar'
 import { FaRegHeart, FaShoppingCart } from 'react-icons/fa'
-
+import FilterNavBar from './FilterNavBar'
 import TopBar from './TopBar'
+import { NavLink } from 'react-router-dom'
 
 function NavBar () {
   return (
@@ -10,11 +11,13 @@ function NavBar () {
       <TopBar />
       <nav className=' bg-primaryGray flex flex-row items-center justify-around '>
         <div className=''>
-          <img
-            src='https://www.venex.com.ar/fil/logo/header_logo_nuevo.png'
-            alt='#'
-            className='h-24 w-72 object-cover flex-shrink-0'
-          />
+          <NavLink to='/'>
+            <img
+              src='https://www.venex.com.ar/fil/logo/header_logo_nuevo.png'
+              alt='#'
+              className='h-24 w-72 object-cover flex-shrink-0'
+            />
+          </NavLink>
         </div>
         <div className=''>
           <SearchBar />
@@ -25,6 +28,8 @@ function NavBar () {
           <li className='text-gray-300 text-3xl'><FaShoppingCart /></li>
         </ul>
       </nav>
+
+      <FilterNavBar />
     </>
   )
 }
