@@ -30,7 +30,7 @@ function Footer () {
               placeholder='direccíon de email...'
             />
             <button className='bg-venex px-3'>
-              <IoSend className='' />
+              <IoSend className='text-white' />
             </button>
           </div>
 
@@ -64,7 +64,7 @@ function Footer () {
           </a>
         </div>
       </div>
-      <p className='flex justify-center bg-primaryGray pb-5 text-white'>Copyright &copy; {new Date().getFullYear()} - Venex. Buenos Aires, Argentina.</p>
+      <p className='flex justify-center bg-primaryGray pb-5 text-white'>Copyright &copy; {new Date().getFullYear()} - Venex Clon. Córdoba, Argentina.</p>
     </>
   )
 }
