@@ -30,6 +30,10 @@ function CreateProduct () {
     dispatch(productsForm(productData))
   }
 
+  const submitButton = (e) => {
+    alert('Producto Creado')
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit} className='flex flex-col items-center py-16'>
@@ -69,6 +73,15 @@ function CreateProduct () {
           onChange={handleInputChange}
         />
 
+        <label>Category:</label>
+        <input
+          type='text'
+          name='category'
+          value={productData.category}
+          onChange={handleInputChange}
+          className='border border-blue-700'
+        />
+
         <label>Brand:</label>
         <input
           type='text'
@@ -89,7 +102,7 @@ function CreateProduct () {
 
         <label>Availability:</label>
         <input
-          type='text'
+          type='checkbox'
           name='availability'
           value={productData.availability}
           onChange={handleInputChange}
@@ -98,6 +111,7 @@ function CreateProduct () {
         <button
           className='my-5'
           type='submit'
+          onClick={submitButton}
         >Enviar
         </button>
       </form>
