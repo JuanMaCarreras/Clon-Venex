@@ -27,7 +27,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif']
       },
       fontSize: {
-        detailName: '1.15rem' // Aquí defines tu propio tamaño de fuente personalizado
+        detailName: '1.15rem'
       }
 
     },
