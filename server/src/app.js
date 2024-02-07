@@ -8,9 +8,11 @@ dotenv.config()
 
 const app = express()
 
+
 //Auth0
 const { CLIENT_ID, SECRET, DOMAIN } = process.env
 
+console.log({ CLIENT_ID })
 // const config = {
 //     authRequired: false,
 //     auth0Logout: true,
@@ -30,10 +32,10 @@ app.use(cors())
 app.use(auth({
     authRequired: false,
     auth0Logout: true,
-    secret: { SECRET },
+    secret: 'CVGIH2F8FH-4KCpHz1lpYeKV02rh-uctdajKAs5WtR6WrOPxCJ19PTKe-xfPMGli',
     baseURL: 'http://localhost:3000',
-    clientID: { CLIENT_ID },
-    issuerBaseURL: { DOMAIN }
+    clientID: 'd3IZZHNzzeu1lBE6mOUhBoxjYZNRMVCS',
+    issuerBaseURL: 'http://dev-ot4bc1zh0nhulgid.us.auth0.com'
 }))
 
 app.use(productsRouters)
