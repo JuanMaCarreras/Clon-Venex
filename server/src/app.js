@@ -9,7 +9,7 @@ dotenv.config()
 const app = express()
 
 //Auth0
-// const { CLIENT_ID, SECRET, DOMAIN } = process.env
+const { CLIENT_ID, SECRET, DOMAIN } = process.env
 
 // const config = {
 //     authRequired: false,
@@ -27,7 +27,14 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 
 //Auth0
-// app.use(auth(config))
+app.use(auth({
+    authRequired: false,
+    auth0Logout: true,
+    secret: { SECRET },
+    baseURL: 'http://localhost:3000',
+    clientID: { CLIENT_ID },
+    issuerBaseURL: { DOMAIN }
+}))
 
 app.use(productsRouters)
 
