@@ -30,7 +30,7 @@ function CreateProduct () {
     dispatch(productsForm(productData))
   }
 
-  const submitButton = (e) => {
+  const submitButton = () => {
     alert('Producto Creado')
   }
 
