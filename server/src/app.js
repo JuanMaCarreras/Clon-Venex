@@ -35,7 +35,7 @@ app.use(auth({
     secret: 'CVGIH2F8FH-4KCpHz1lpYeKV02rh-uctdajKAs5WtR6WrOPxCJ19PTKe-xfPMGli',
     baseURL: 'http://localhost:3000',
     clientID: 'd3IZZHNzzeu1lBE6mOUhBoxjYZNRMVCS',
-    issuerBaseURL: 'http://dev-ot4bc1zh0nhulgid.us.auth0.com'
+    issuerBaseURL: 'https://dev-ot4bc1zh0nhulgid.us.auth0.com'
 }))
 
 app.use(productsRouters)
