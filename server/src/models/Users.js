@@ -4,7 +4,7 @@ import sequelize from '../db.js'
 const Users = sequelize.define('users', {
     name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     email: {
         type: DataTypes.STRING,
