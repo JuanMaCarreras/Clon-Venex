@@ -6,6 +6,7 @@ const router = Router()
 
 
 router.post('/register', createUser)
+router.get('/all_users')
 
 
 

@@ -11,7 +11,7 @@ export const createUser = async (req, res) => {
             password,
         })
 
-        res.status(200).json(createNewUser)
+        res.status(201).json(createNewUser)
 
     } catch (error) {
         console.log('create user', error)
@@ -22,5 +22,19 @@ export const createUser = async (req, res) => {
 }
 
 export const getAllUsers = (req, res) => {
+    try {
+
+        const getAllUsers = Users.findAll()
+
+        getAllUsers.lenght === 0 ? res.status(404) :
+
+            res.status(200).json(getAllUsers)
+
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ error: 'Internal Server Error' })
+    }
 
 }
+
+
