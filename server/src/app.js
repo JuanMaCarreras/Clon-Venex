@@ -13,7 +13,7 @@ const app = express()
 //Auth0
 const { CLIENT_ID, SECRET, DOMAIN } = process.env
 
-console.log({ CLIENT_ID })
+// console.log({ CLIENT_ID })
 // const config = {
 //     authRequired: false,
 //     auth0Logout: true,
