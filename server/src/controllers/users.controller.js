@@ -4,14 +4,15 @@ export const createUser = async (req, res) => {
 
     try {
 
-        const { email, password } = req.body
+        const { id, email, password } = req.body
 
-        const createNewUser = await Users.create({
+        const newUser = await Users.create({
+            auth0Id: id,
             email,
             password,
         })
 
-        res.status(201).json(createNewUser)
+        res.status(201).json(newUser)
 
     } catch (error) {
         console.log('create user', error)
