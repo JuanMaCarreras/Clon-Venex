@@ -10,14 +10,14 @@ function Card ({ product }) {
   return (
     <>
       <NavLink to={`/products/${id}`}>
-        <article className='flex flex-col justify-center m-5 py-5 bg-green-500'>
+        <article className='flex flex-col justify-center m-2 py-5 w-60 bg-green-500'>
           <div className='bg-gray-300'>
-            <img src={img} alt='img' className='h-52 w-52 ' />
+            <img src={img} alt='img' className='h-52 w-full ' />
           </div>
 
-          <div className='bg-red-400'>
+          <div className='bg-red-400 w-auto'>
             <h2 className='text-2xl font-medium'>${price}</h2>
-            <h3 className='text-sm text-gray-500 max-w-xl'>{name}</h3>
+            <h3 className='text-sm text-center text-gray-500 break-words'>{name}</h3>
           </div>
         </article>
       </NavLink>
