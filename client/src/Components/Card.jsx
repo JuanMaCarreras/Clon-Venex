@@ -12,12 +12,12 @@ function Card ({ product }) {
       <NavLink to={`/products/${id}`}>
         <article className='flex flex-col justify-center m-2 py-5 w-60 bg-green-500'>
           <div className='bg-gray-300'>
-            <img src={img} alt='img' className='h-52 w-full ' />
+            <img src={img} alt='img' className='h-52 w-52' />
           </div>
 
           <div className='bg-red-400 w-auto'>
+            <h3 className='text-sm text-center text-gray-700 break-words'>{name}</h3>
             <h2 className='text-2xl font-medium'>${price}</h2>
-            <h3 className='text-sm text-center text-gray-500 break-words'>{name}</h3>
           </div>
         </article>
       </NavLink>
