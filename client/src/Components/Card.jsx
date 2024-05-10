@@ -11,8 +11,8 @@ function Card ({ product }) {
     <>
       <NavLink to={`/products/${id}`}>
         <article className='flex flex-col justify-center m-2 py-5 w-60 bg-green-500'>
-          <div className='bg-gray-300'>
-            <img src={img} alt='img' className='h-52 w-52' />
+          <div className='bg-gray-300 flex justify-center'>
+            <img src={img} alt={name} className='h-60 w-60' />
           </div>
 
           <div className='bg-red-400 w-auto'>
