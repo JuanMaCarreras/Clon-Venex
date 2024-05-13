@@ -1,10 +1,12 @@
+import { IoIosArrowDown } from 'react-icons/io'
+
 function FilterNavBar () {
   return (
     <>
       <ul className='flex flex-row justify-between py-16px px-14 bg-white'>
         <li
-          className='font-semibold border-r border-solid border-gray-300 pr-5'
-        >CATEGORÍAS
+          className='flex items-center font-semibold border-r border-solid border-gray-300 pr-5'
+        >CATEGORÍAS <IoIosArrowDown className='ml-1 text-venex' />
         </li>
         <li
           className='font-montserrat text-primaryGray '
