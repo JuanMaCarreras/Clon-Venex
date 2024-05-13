@@ -11,13 +11,15 @@ function Card ({ product }) {
     <>
       <NavLink to={`/products/${id}`}>
         <article
-          className='flex flex-col items-center justify-center m-5 w-72 border-gray-300 border-[1px] rounded-lg hover:border-venex '
+          className='flex flex-col items-center justify-cente  m-3 w-72 border-gray-300 border-[1px] rounded-lg hover:border-venex '
         >
-          <img
-            src={img}
-            alt={name}
-            className='h-56 w-56 bg-transparent'
-          />
+          <div className='my-4'>
+            <img
+              src={img}
+              alt={name}
+              className='h-52 w-52'
+            />
+          </div>
 
           <div className='pt-4 pb-2 px-4'>
             <h3 className='text-sm text-center text-gray-500 break-words'>{name}</h3>
