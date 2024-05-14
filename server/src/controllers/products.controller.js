@@ -153,3 +153,9 @@ export const getBrand = async (req, res) => {
 
 
 }
+
+
+
+export const updateProductsById = (req, res) => {
+    res.json('Implementar la logica de actualizar producto')
+}
