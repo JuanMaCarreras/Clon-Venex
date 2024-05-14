@@ -11,9 +11,9 @@ function Card ({ product }) {
     <>
       <NavLink to={`/products/${id}`}>
         <article
-          className='flex flex-col items-center justify-cente  m-3 w-72 border-gray-300 border-[1px] rounded-lg hover:border-venex '
+          className='flex flex-col items-center justify-cente  m-3 w-72 border-gray-300 border-[1px] rounded-lg hover:border-venex shadow-lg'
         >
-          <div className='my-4'>
+          <div className='bg-blue-400'>
             <img
               src={img}
               alt={name}
@@ -21,7 +21,7 @@ function Card ({ product }) {
             />
           </div>
 
-          <div className='pt-4 pb-2 px-4'>
+          <div className='pt-5 pb-3 px-4 bg-gray-200 rounded-b-lg'>
             <h3 className='text-sm text-center text-gray-500 break-words'>{name}</h3>
             <h2 className='text-2xl font-medium py-2'>${price}</h2>
           </div>
