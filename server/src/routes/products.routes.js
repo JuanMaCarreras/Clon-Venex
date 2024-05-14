@@ -10,7 +10,7 @@ router.get('/products/:name', productsCtrl.searchProducts)
 router.get('/products/category/:category', productsCtrl.getCategory)
 router.get('/products/brand/:brand', productsCtrl.getBrand)
 router.post('/products', productsCtrl.createProducts)
-router.put('/products/:id')
+router.put('/products/:id', productsCtrl.updateProductsById)
 router.delete('/products/:id')
 
 
