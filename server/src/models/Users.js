@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize'
 import sequelize from '../db.js'
+import Roles from './Roles.js'
 
 const Users = sequelize.define('users', {
     id: {
@@ -26,5 +27,11 @@ const Users = sequelize.define('users', {
         defaultValue: 'https://icon-library.com/images/default-user-icon/default-user-icon-13.jpg'
     },
 })
+
+
+
+
+Users.belongsToMany(Roles, { through: 'UserRoles' })
+Roles.belongsToMany(Users, { through: 'UserRoles' })
 
 export default Users
