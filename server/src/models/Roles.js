@@ -1,6 +1,5 @@
 import { DataTypes } from 'sequelize'
-import sequelize from '../db'
-import Users from './Users'
+import sequelize from '../db.js'
 
 
 const Roles = sequelize.define('role', {
@@ -11,11 +10,6 @@ const Roles = sequelize.define('role', {
     }
 
 })
-
-
-
-Users.belongsToMany(Roles, { through: 'UserRoles' })
-Roles.belongsToMany(Users, { through: 'UserRoles' })
 
 
 
