@@ -29,8 +29,6 @@ const Users = sequelize.define('users', {
 })
 
 
-
-
 Users.belongsToMany(Roles, { through: 'UserRoles' })
 Roles.belongsToMany(Users, { through: 'UserRoles' })
 
