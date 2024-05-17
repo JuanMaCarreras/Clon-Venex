@@ -30,6 +30,12 @@ export const signUp = async (req, res) => {
 }
 
 export const signIn = (req, res) => {
+
+    const { email, password } = req.body
+
+    console.log(email, password)
+
+
     res.json('Sign In')
 
 }
