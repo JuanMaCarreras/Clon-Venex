@@ -1,6 +1,6 @@
 import Roles from "../models/Roles"
 
-export const initialRoles = async () => {
+export const createRoles = async () => {
 
     try {
         const count = await Roles.count()
