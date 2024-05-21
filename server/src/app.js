@@ -1,7 +1,6 @@
 import morgan from 'morgan'
 import express from 'express'
 import cors from 'cors'
-import { createRoles } from './libs/initialRoles.js'
 import productsRouters from './routes/products.routes.js'
 import usersRouters from './routes/users.routes.js'
 import authRouters from './routes/auth.routes.js'
@@ -9,7 +8,6 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const app = express()
-createRoles()
 
 
 // Middleware
