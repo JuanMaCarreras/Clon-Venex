@@ -1,6 +1,8 @@
 import bcrypt from 'bcrypt'
 import Users from '../models/Users.js'
 // import Roles from '../models/Roles.js'
+import jwt from 'jsonwebtoken'
+import config from '../config.js'
 
 export const signUp = async (req, res) => {
 
@@ -18,8 +20,11 @@ export const signUp = async (req, res) => {
 
         console.log(user)
 
+        const token = jwt.sign({ id: user.id }, config.SECRET, { expiresin: 86400 })
 
-        res.json('Todo ok rey')
+
+
+        res.status(200).json({ token })
 
     } catch (error) {
 
