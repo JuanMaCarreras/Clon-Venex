@@ -10,14 +10,12 @@ const Roles = sequelize.define('role', {
         allowNull: false
     },
     name: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.ENUM('user', 'admin'),
+        allowNull: false,
+        defaultValue: 'user',
     }
 
 })
-
-
-
 
 
 export default Roles
