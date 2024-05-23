@@ -18,19 +18,24 @@ export const signUp = async (req, res) => {
             password: hashedPassword
         })
 
-        console.log(newUser)
 
-        const token = jwt.sign({ id: newUser.id }, config.SECRET, { expiresin: 86400 })
+        const token = jwt.sign({ id: newUser.id }, config.SECRET, { expiresIn: 86400 })
+
+
 
 
         if (roles) {
-            const findRoles = await Roles.find({ where: { name: roles } })
-            newUser.roles = findRoles.map(role => role.id)
+
+            let role = await Roles.findAll({ where: { name: roleNames, }, })
 
         } else {
 
+            let role = await Roles.findOne({ where: { name: 'user', }, })
+
+            await newUser.setRoles(role)
         }
 
+        console.log(name, email, password, roles)
 
         res.status(200).json({ token })
 
