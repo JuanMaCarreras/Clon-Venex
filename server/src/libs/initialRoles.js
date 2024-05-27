@@ -2,18 +2,19 @@ import Roles from '../models/Roles.js';
 
 export const createRoles = async () => {
     try {
-        const count = await Roles.count()
+        const countRole = ['user', 'moderator', 'admin']
 
-        if (count === 0) {
-            await Promise.all([
-                Roles.create({ name: 'user' }),
-                Roles.create({ name: 'moderator' }),
-                Roles.create({ name: 'admin' }),
-            ])
+        for (let role of countRole) {
+            const foundRole = await Roles.findOne({ where: { name: role } })
 
-            console.log('Roles initialized')
+            if (!foundRole) {
+                await Roles.create({ name: role });
+                console.log(`Role ${role} created`);
+            }
+
         }
+
     } catch (error) {
         console.error('Error initializing roles:', error);
     }
-};
+}
