@@ -5,11 +5,9 @@ import productsRouters from './routes/products.routes.js'
 import usersRouters from './routes/users.routes.js'
 import authRouters from './routes/auth.routes.js'
 import dotenv from 'dotenv'
-import { createRoles } from './libs/initialRoles.js'
 dotenv.config()
 
 const app = express()
-createRoles()
 
 
 // Middleware
