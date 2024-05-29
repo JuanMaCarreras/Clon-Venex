@@ -12,3 +12,9 @@ export const tokenSign = (user) => {
         { expiresIn: '1d' }
     )
 }
+
+
+export const verifyToken = (token) => {
+    return jwt.verify(token, SECRET)
+
+}
