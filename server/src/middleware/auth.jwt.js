@@ -1,5 +1,5 @@
 import Users from '../models/Users.js'
-import { verifyToken } from '../helpers/token.jwt.js'
+import { verifyJwtToken } from '../helpers/token.jwt.js'
 
 export const verifyToken = async (req, res, next) => {
     try {
