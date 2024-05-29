@@ -14,7 +14,7 @@ export const tokenSign = (user) => {
 }
 
 
-export const verifyToken = (token) => {
+export const verifyJwtToken = (token) => {
     return jwt.verify(token, SECRET)
 
 }
