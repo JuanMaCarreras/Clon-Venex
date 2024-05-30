@@ -6,7 +6,7 @@ export const verifyToken = async (req, res, next) => {
         const token = req.headers['x-access-token']
         if (!token) return res.status(401).json({ message: 'No token provider' })
 
-        const decoded = await verifyToken(token)
+        const decoded = await verifyJwtToken(token)
 
         const user = await Users.findByPk(decoded.id)
 
@@ -25,8 +25,7 @@ export const verifyToken = async (req, res, next) => {
 export const authorizeRole = (requireRoles) => {
     return (req, res, next) => {
         const userRole = req.user.role
-
-        if (!userRole) return res.status(403).json({ message: 'Not authorized' })
+        if (!requireRoles.includes(userRole)) return res.status(403).json({ message: 'Not authorized' })
 
         next()
     }
