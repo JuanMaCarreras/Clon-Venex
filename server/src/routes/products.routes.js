@@ -11,7 +11,7 @@ router.get('/products/category/:category', productsCtrl.getCategory)
 router.get('/products/brand/:brand', productsCtrl.getBrand)
 
 router.post('/products', verifyToken, authorizeRole(['admin']), productsCtrl.createProducts)
-router.put('/products/:id', productsCtrl.updateProductsById)
+router.put('/products/:id', verifyToken, authorizeRole(['admin']), productsCtrl.updateProductsById)
 router.delete('/products/:id')
 
 
