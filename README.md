@@ -27,6 +27,6 @@ Backend: Node.js (Express, Sequelize).
 
 Base de Datos: PostgreSQL.
 
-Seguridad: Protocolo HTTPS, autenticación de usuarios, encriptación de datos, y uso de JWT (Json Web Token) para asegurar tus sesiones y proteger tu información personal.
+Seguridad: Protocolo HTTPS, autenticación de usuarios, encriptación de datos, y uso de JWT (Json Web Token) para asegurar tus sesiones y proteger tu información personal. He inicio de sesion con Gmail y/o Facebook con 0Atuh2.
 
 
