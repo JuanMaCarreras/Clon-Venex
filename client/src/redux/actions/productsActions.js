@@ -1,14 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import {
-  getAllProducts,
-  searchProducts,
-  createProducts,
-  productID
-} from '../../api/api'
+import * as productsfn from '../../api/api.products'
 
 export const fetchProducts = createAsyncThunk('/products/fetchProducts', async () => {
   try {
-    const res = await getAllProducts()
+    const res = await productsfn.getAllProducts()
     return res
   } catch (error) {
     console.log(error)
@@ -19,7 +14,7 @@ export const fetchProducts = createAsyncThunk('/products/fetchProducts', async (
 
 export const searchProduct = createAsyncThunk('/products/searchProducts', async (productName, { rejectedWithValue }) => {
   try {
-    const res = await searchProducts(productName)
+    const res = await productsfn.searchProducts(productName)
     return res
   } catch (error) {
     return rejectedWithValue(error)
@@ -28,7 +23,7 @@ export const searchProduct = createAsyncThunk('/products/searchProducts', async 
 
 export const productsForm = createAsyncThunk('/creteProducts', async productData => {
   try {
-    const res = await createProducts(productData)
+    const res = await productsfn.createProducts(productData)
     return res
   } catch (error) {
     console.log(error)
@@ -38,7 +33,7 @@ export const productsForm = createAsyncThunk('/creteProducts', async productData
 
 export const getProductById = createAsyncThunk('/:id', async productId => {
   try {
-    const res = await productID(productId)
+    const res = await productsfn.productID(productId)
     return res
   } catch (error) {
     console.log(error)
