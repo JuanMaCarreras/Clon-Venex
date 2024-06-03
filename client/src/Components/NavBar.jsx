@@ -9,7 +9,7 @@ function NavBar () {
     <>
 
       <TopBar />
-      <nav className=' bg-primaryGray flex flex-row items-center justify-around '>
+      <nav className=' bg-primaryGray flex flex-row items-center justify-around h-[84px]'>
         <div className=''>
           <NavLink to='/'>
             <img

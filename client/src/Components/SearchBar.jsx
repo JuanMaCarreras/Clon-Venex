@@ -21,14 +21,14 @@ function SearchBar () {
   return (
     <>
       <div
-        className='py-5 flex justify-center bg-primaryGray'
+        className=' flex justify-center bg-primaryGray'
       >
         <input
           type='text'
           value={prductName}
           onChange={handlerChange}
           placeholder='Eso que querés.. buscalo acá'
-          className='w-600px h-41px rounded-l-md outline-none px-4 border-1 border-gray-300'
+          className='w-[590px] h-[43px] rounded-l-md outline-none px-4 border-1 border-gray-300'
         />
 
         <button
