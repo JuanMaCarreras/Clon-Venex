@@ -74,7 +74,6 @@ export const searchProducts = async (req, res) => {
     }
 }
 
-
 export const getProductsById = async (req, res) => {
     try {
 
@@ -98,7 +97,6 @@ export const getProductsById = async (req, res) => {
 
 
 }
-
 
 export const getCategory = async (req, res) => {
 
@@ -153,8 +151,6 @@ export const getBrand = async (req, res) => {
 
 
 }
-
-
 
 export const updateProductsById = (req, res) => {
     res.json('Implementar la logica de actualizar producto')
