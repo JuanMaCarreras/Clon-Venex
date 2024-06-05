@@ -25,6 +25,15 @@ const authSlice = createSlice({
         state.status = 'failed'
         state.error = action.payload
       })
+      .addCase(authFn.loginUser.fulfilled, (state, action) => {
+        state.isAutehticator = true
+        state.data = action.payload.data
+        state.toke = action.payload.toke
+      })
+      .addCase(authFn.loginUser.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.payload
+      })
   }
 })
 
