@@ -27,30 +27,36 @@ function Register () {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Nombre*'
-          value={userData.name}
-          onChange={handleChange}
-        />
-        <input
-          type='email'
-          name='email'
-          placeholder='Dirección de email*'
-          value={userData.email}
-          onChange={handleChange}
-        />
-        <input
-          type='password'
-          name='password'
-          placeholder='Contraseña*'
-          value={userData.password}
-          onChange={handleChange}
-        />
-        <button type='submit'>Registrarme</button>
-      </form>
+      <div className='border border-solid-2 border-red-600'>
+        <form
+          onSubmit={handleSubmit}
+          className='flex flex-wrap '
+        >
+          <input
+            type='text'
+            name='name'
+            placeholder='Nombre*'
+            value={userData.name}
+            onChange={handleChange}
+            className='w-[370px] h-[41px]'
+          />
+          <input
+            type='email'
+            name='email'
+            placeholder='Dirección de email*'
+            value={userData.email}
+            onChange={handleChange}
+          />
+          <input
+            type='password'
+            name='password'
+            placeholder='Contraseña*'
+            value={userData.password}
+            onChange={handleChange}
+          />
+          <button type='submit'>Registrarme</button>
+        </form>
+      </div>
     </>
   )
 }
