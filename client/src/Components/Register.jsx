@@ -24,9 +24,13 @@ function Register () {
 
   return (
     <>
-      <div className='border border-solid-2 border-red-600 w-[800px] m-8'>
+      <div className='border rounded-md border-red-600 w-[800px] m-8 font-montserrat'>
 
-        <div className={`p-3 ${(formik.touched.email && formik.errors.email) || (formik.touched.password && formik.errors.password) ? 'bg-[#dd4b39] border rounded-lg ' : ''}`}>
+        <div className={`px-3 py-1 ${(formik.touched.name && formik.errors.name) || (formik.touched.email && formik.errors.email) || (formik.touched.password && formik.errors.password) ? 'bg-[#dd4b39] border rounded-lg ' : ''}`}>
+          {formik.touched.name && formik.errors.name && (
+            <p className='text-white'>{formik.errors.name}</p>
+          )}
+
           {formik.touched.email && formik.errors.email && (
             <p className='text-white'>{formik.errors.email}</p>
           )}
@@ -37,7 +41,7 @@ function Register () {
 
         <form
           onSubmit={formik.handleSubmit}
-          className='flex  items-center flex-wrap h-[360px] [&>input]:w-[370px] [&>input]:h-[41px] [&>input]:my-6 [&>input]:border [&>input]:border-1 [&>input]:border-gray-300 [&>input]:rounded-lg '
+          className='flex  items-center flex-wrap h-[360px]  [&>input]:outline-none [&>input]:w-[370px] [&>input]:h-[41px] [&>input]:p-3 [&>input]:my-6 [&>input]:border [&>input]:border-1 [&>input]:border-gray-300 [&>input]:rounded-md [&>input]:m-2 '
         >
           <input
             type='text'
@@ -46,6 +50,7 @@ function Register () {
             value={formik.values.name}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+
           />
           <input
             type='email'
@@ -54,7 +59,6 @@ function Register () {
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className=''
           />
           <input
             type='password'
@@ -63,8 +67,14 @@ function Register () {
             value={formik.values.password}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+
           />
-          <button type='submit'>Registrarme</button>
+          <button
+            type='submit'
+            className='flex items-center justify-start px-3 w-[370px] h-[41px] text-white rounded-md border-b-2 hover:bg-[#1670f7] transition-colors duration-300 border-[#1670f7] bg-[#3483fa]'
+          >Registrarme
+          </button>
+
         </form>
       </div>
     </>
