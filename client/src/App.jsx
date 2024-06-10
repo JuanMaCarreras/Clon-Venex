@@ -7,6 +7,7 @@ import HelpCenter from './components/HelpCenter'
 // import NavBar from './components/NavBar'
 import Register from './components/Register.jsx'
 import Login from './components/Login.jsx'
+import Auth from './components/Auth.jsx'
 
 function App () {
   return (
@@ -16,6 +17,7 @@ function App () {
         <Route exact path='/' element={<Home />} />
         <Route exact path='/register' element={<Register />} />
         <Route exact path='/login' element={<Login />} />
+        <Route exact path='/Auth' element={<Auth />} />
 
         <Route path='/create-products' element={<CreateProducts />} />
         <Route path='/products/:productId' element={<ProductDetails />} />
