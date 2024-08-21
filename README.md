@@ -1,23 +1,22 @@
-## Proyecto Clon de E-Commerce de Tecnología
+## Proyecto Clon de E-Commerce de Tecnología (Venex)
 
-¡Proyecto clon de una página de e-commerce de tecnología! Este proyecto tiene como objetivo recrear la experiencia de compra en línea de una conocida tienda de tecnología (Venex).
+¡Clon de un e-commerce de tecnología! Este proyecto tiene como objetivo recrear la experiencia de compra en línea de una conocida tienda de tecnología (Venex).
 
-## Características Principales
-
-Exploración de Productos: Navega fácilmente por una amplia gama de productos, desde dispositivos móviles hasta computadoras y accesorios electrónicos.
-
-Detalles del Producto: Obtén información detallada sobre cada producto, incluyendo especificaciones técnicas.
-
-Creación de Usuarios: Regístrate y crea una cuenta en donde poder guardar tus productos favoritos y disfrutar de una experiencia de compra personalizada.
+## Características
+- Autenticación de usuarios (registro y login).
+- Panel de administración: Gestión de Inventario, sistema de control de inventario para actualizar la disponibilidad de productos.
+- Catálogo de Productos: Visualización de productos con detalles como imágenes, precios, descripciones y categorías.
+- Búsqueda y Filtrado: Funcionalidad avanzada de búsqueda y filtrado por categorías, precios y otras opciones.
 
 
-<!-- Carrito de Compras: Agrega productos al carrito de compras, revisa y modifica la selección antes de finalizar la compra.
+## Tecnologías
 
-Proceso de Pago Seguro: Garantizamos la seguridad de tus transacciones mediante un proceso de pago encriptado y seguro. -->
+- **Frontend:** React, Redux Toolkit, TailwindCSS
+- **Backend:** Node.js, Express, Sequelize
+- **Base de Datos:** MongoDB
+- **Autenticación:** JWT
 
-<!-- Seguimiento de Pedidos: Mantente informado sobre el estado de tus pedidos con actualizaciones en tiempo real y un historial detallado. -->
 
-## Tecnologías Utilizadas
 
 Usando tecnologías modernas para ofrecer una experiencia de usuario robusta y eficiente. Algunas de las tecnologías destacadas incluyen:
 
